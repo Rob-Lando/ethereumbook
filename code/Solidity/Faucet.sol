@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: CC-BY-SA-4.0
 
 // Version of Solidity compiler this program was written for
-pragma solidity 0.6.4;
+pragma solidity 0.8.19;
 
 // Our first contract is a faucet!
 contract Faucet {
@@ -20,7 +20,7 @@ contract Faucet {
         // require() is a built-in Solidity function used to test a precondition
 
         // Send the amount to the address that requested it
-        msg.sender.transfer(withdraw_amount);
+        payable(msg.sender).transfer(withdraw_amount);
         // msg object is one of the inputs that all contracts can access.
         // It represents the transaction that triggered the exectution of the contract.
         // The attribute, sender, is the sender address of the transaction.
