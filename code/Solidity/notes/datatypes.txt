@@ -1,3 +1,11 @@
+See: https://docs.soliditylang.org/en/latest/types.html
+
+The concept of "undefined" or "null" values does not exist in Solidity,
+but newly declared variables always have a default value dependent on its type.
+To handle any unexpected values, 
+you should use the revert function to revert the whole transaction, 
+or return a tuple with a second bool value denoting success.
+
 Boolean (bool):
     Bolean value with logical operators 
         ! (not)
