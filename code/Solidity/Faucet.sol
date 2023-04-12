@@ -32,3 +32,21 @@ contract Faucet {
 // Registering a contract on the blockchain 
 // involves creating a special transaction whose destination is the address 0x0000000000000000000000000000000000000000, 
 // also known as the zero address.
+
+
+/* 
+To compile via command line:
+
+solc <path_to_sol_file>.sol
+
+We use the --bin and --optimize arguments of solc to produce an optimized binary of our example contract:
+
+solc --optimize --bin Faucet.sol
+
+To produce the ABI for our Faucet.sol example contract:
+
+solc --abi Faucet.sol
+
+The ABI defines how data structures and functions are accessed in machine code.
+All that is needed for an application to interact with a contract is an ABI and the address where the contract has been deployed.
+*/
